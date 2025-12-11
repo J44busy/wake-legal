@@ -3,53 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WAKE - Legal</title>
+    <title>WAKE - Support & Legal</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0C0A09;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
             color: #FAFAF9;
+            background: #0C0A09;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 40px 20px;
         }
-        .container { text-align: center; max-width: 400px; }
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #F59E0B;
-            margin-bottom: 0.5rem;
+        h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.5rem; margin: 2rem 0 1rem; color: #FAFAF9; }
+        h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: #FAFAF9; }
+        p, li { margin-bottom: 1rem; color: #a8a29e; }
+        ul, ol { padding-left: 1.5rem; }
+        a { color: #F59E0B; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid #292524;
+            margin-bottom: 2rem;
         }
-        p { color: #a8a29e; margin-bottom: 2rem; }
-        .links { display: flex; flex-direction: column; gap: 1rem; }
-        a {
-            display: block;
-            padding: 1rem 2rem;
-            background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
+        .hero h1 { font-size: 3rem; color: #F59E0B; font-weight: 700; }
+        .hero p { color: #a8a29e; font-size: 1.1rem; margin-top: 0.5rem; }
+        .support-section {
+            background: #1C1917;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            border: 1px solid #292524;
+        }
+        .contact-card {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
             color: #0C0A09;
-            text-decoration: none;
-            font-weight: 600;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .contact-card h2 { color: #0C0A09; margin-top: 0; }
+        .contact-card p { color: #0C0A09; opacity: 0.8; }
+        .contact-card a { color: #0C0A09; font-weight: 600; }
+        .contact-email {
+            background: rgba(255,255,255,0.2);
+            padding: 1rem 2rem;
             border-radius: 12px;
+            font-size: 1.3rem;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        .response-time {
+            background: rgba(0,0,0,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            color: #0C0A09;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        .faq-item { margin-bottom: 1.5rem; }
+        .faq-item h3 { color: #FAFAF9; }
+        .faq-item p, .faq-item li { color: #a8a29e; }
+        .legal-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .legal-link {
+            background: #292524;
+            padding: 1.5rem;
+            border-radius: 12px;
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            border: 1px solid #3f3f46;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        a:hover {
+        .legal-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+            text-decoration: none;
+        }
+        .legal-link h3 { color: #F59E0B; margin: 0 0 0.5rem 0; }
+        .legal-link p { color: #a8a29e; margin: 0; font-size: 0.9rem; }
+        .email-btn {
+            background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
+            color: #0C0A09;
+            padding: 14px 28px;
+            border-radius: 12px;
+            display: inline-block;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .email-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3);
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #292524;
+            color: #57534e;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>WAKE</h1>
-        <p>Legal Documents</p>
-        <div class="links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
+        <div class="hero">
+            <h1>WAKE</h1>
+            <p>Science-backed morning light therapy to naturally boost your energy</p>
         </div>
+
+        <div class="contact-card">
+            <h2>Need Help? Contact Us</h2>
+            <p>We're here to help with any questions about the WAKE app, your subscription, or troubleshooting issues.</p>
+            <div class="contact-email">
+                <a href="mailto:support@wakealarm.app">support@wakealarm.app</a>
+            </div>
+            <div class="response-time">
+                We typically respond within 24-48 hours
+            </div>
+        </div>
+
+        <div class="support-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>What is WAKE?</h3>
+                <p>WAKE is a morning light therapy app that uses scientifically-backed protocols to help you wake up naturally and feel more energized. By exposing yourself to specific light patterns upon waking, you can regulate your cortisol levels and reduce dependency on caffeine.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What do I get with WAKE Pro?</h3>
+                <p>WAKE Pro includes:</p>
+                <ul>
+                    <li><strong>Unlimited guided wake sessions</strong> - Access all morning light therapy sessions</li>
+                    <li><strong>Multiple session types</strong> - Deep, light, and energizing sessions to match your needs</li>
+                    <li><strong>Progress tracking</strong> - Track your streak and see your transformation over 30 days</li>
+                    <li><strong>Wake alarm integration</strong> - Set alarms that launch directly into your session</li>
+                    <li><strong>Milestone celebrations</strong> - Track achievements at Day 7, 14, and 30</li>
+                    <li><strong>All future updates</strong> - New sessions and features as we add them</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I cancel my subscription?</h3>
+                <p>You can cancel your subscription anytime through your iPhone's Settings:</p>
+                <ol>
+                    <li>Open <strong>Settings</strong> on your iPhone</li>
+                    <li>Tap your <strong>Apple ID</strong> at the top</li>
+                    <li>Tap <strong>Subscriptions</strong></li>
+                    <li>Select <strong>WAKE</strong></li>
+                    <li>Tap <strong>Cancel Subscription</strong></li>
+                </ol>
+                <p>Your access continues until the end of your billing period.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I request a refund?</h3>
+                <p>If you're not satisfied with WAKE, you can request a refund through Apple within 7 days of purchase. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> and sign in with your Apple ID to submit a refund request.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>The app isn't working properly. What should I do?</h3>
+                <p>Try these steps:</p>
+                <ol>
+                    <li>Force quit WAKE and reopen it</li>
+                    <li>Make sure you have the latest version from the App Store</li>
+                    <li>Restart your iPhone</li>
+                    <li>Check that notifications are enabled for WAKE in Settings</li>
+                </ol>
+                <p>If the problem persists, email us at <a href="mailto:support@wakealarm.app">support@wakealarm.app</a> with a description of the issue.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is my data private?</h3>
+                <p>Yes. All your session data, streaks, and preferences are stored locally on your device. We don't collect personal information or track you across apps. See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+            </div>
+        </div>
+
+        <div class="support-section">
+            <h2>Legal Documents</h2>
+            <div class="legal-links">
+                <a href="privacy.html" class="legal-link">
+                    <h3>Privacy Policy</h3>
+                    <p>How we handle your data</p>
+                </a>
+                <a href="terms.html" class="legal-link">
+                    <h3>Terms of Service</h3>
+                    <p>Terms and conditions of use</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="support-section" style="text-align: center;">
+            <h2>Still Need Help?</h2>
+            <p>Our support team is ready to assist you with any questions or issues.</p>
+            <p style="margin-top: 1.5rem;">
+                <a href="mailto:support@wakealarm.app" class="email-btn">
+                    Email Support
+                </a>
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 WAKE. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
